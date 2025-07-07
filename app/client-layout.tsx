@@ -9,13 +9,15 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-const StarsCanvas = dynamic(() => import("@/components/star-background").then(mod => mod.StarsCanvas), { ssr: false });
-const BlackHoleVideo = dynamic(() => import("@/components/black-hole-video").then(mod => mod.BlackHoleVideo), { ssr: false });
+const StarsCanvas = dynamic(
+  () => import("@/components/star-background").then((mod) => mod.StarsCanvas),
+  { ssr: false }
+);
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,7 +28,7 @@ const fontDisplay = localFont({
   src: [
     {
       path: "../public/fonts/Satoshi-Regular.woff2",
-      weight: "400", 
+      weight: "400",
       style: "normal",
     },
     {
@@ -37,19 +39,15 @@ const fontDisplay = localFont({
     {
       path: "../public/fonts/Satoshi-Bold.woff2",
       weight: "700",
-      style: "normal", 
+      style: "normal",
     },
   ],
   variable: "--font-display",
 });
 
-export function ClientLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function ClientLayout({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -64,7 +62,7 @@ export function ClientLayout({
         )}
       >
         <ThemeProvider
-          attribute="class" 
+          attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
@@ -72,20 +70,17 @@ export function ClientLayout({
           {mounted && (
             <>
               <StarsCanvas />
-              <BlackHoleVideo />
             </>
           )}
           <SmoothScrollProvider>
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
-              <main className="flex-1 pt-16">
-                {children}
-              </main>
+              <main className="flex-1 pt-16">{children}</main>
               <Footer />
             </div>
             <ScrollToTop />
             <ScrollProgress />
-            <SpeedInsights/>
+            <SpeedInsights />
             <Analytics />
           </SmoothScrollProvider>
         </ThemeProvider>

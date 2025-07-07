@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { SectionHeader } from "@/components/shared/section-header";
 import { ContactForm } from "@/components/contact/contact-form";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { socialLinks } from "@/data/social";
 
 export default function ContactPage() {
@@ -29,7 +35,7 @@ export default function ContactPage() {
       <div className="container px-4 md:px-6 mx-auto">
         <SectionHeader
           title="Get In Touch"
-          subtitle="Have a project in mind or want to collaborate? I&apos;d love to hear from you!"
+          subtitle="Have a project in mind or want to collaborate? I'd love to hear from you!"
         />
 
         <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
@@ -42,7 +48,8 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle>Send me a message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I&apos;ll get back to you as soon as possible.
+                  Fill out the form below and I&apos;ll get back to you as soon
+                  as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -89,9 +96,7 @@ export default function ContactPage() {
 
                 <div className="mt-auto pt-6">
                   <h3 className="font-medium mb-2">Current Location</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Boston, Massachusetts, USA
-                  </p>
+                  <p className="text-sm text-muted-foreground">New York, USA</p>
                 </div>
               </CardContent>
             </Card>

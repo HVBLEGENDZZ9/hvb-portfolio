@@ -34,13 +34,29 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Who I Am</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I&apos;m Achyut Katiyar, a Full Stack Developer with a passion for creating innovative web applications and exploring blockchain technologies. I&apos;m currently pursuing a Master&apos;s in Computer Science at Northeastern University, where I continue to expand my knowledge and skills.
+                As a versatile and results-driven software developer, I
+                specialize in architecting and deploying full-stack solutions
+                with a deep expertise in Java, Spring Boot, and React.js.
+                Passionate about building efficient and impactful software, I am
+                currently completing my Master of Science in Computer Science at
+                the University at Buffalo and am eager to apply my skills to
+                solve complex technical challenges
               </p>
               <p>
-                With expertise in Next.js, React, and various blockchain technologies, I enjoy building scalable and user-friendly applications that solve real-world problems. My background in computer science has given me a strong foundation in algorithms, data structures, and system design, which I apply to create efficient and maintainable code.
+                My experience is demonstrated by my work at Nomura, where I
+                constructed a robust Spring Boot application that achieved a 25%
+                reduction in trade processing time. I have a proven ability to
+                lead projects from concept to deployment, including "DiveDash,"
+                a full-stack Diversity & Inclusion monitoring tool built with
+                Spring Boot and React , and "Enigma," a real-time chat
+                application for which I engineered intuitive React components
+                and scalable APIs.
               </p>
               <p>
-                I&apos;m particularly interested in the intersection of web development and blockchain technology, where I&apos;ve developed several projects that leverage the power of decentralized systems to create secure and transparent applications.
+                I&apos;m particularly interested in the intersection of web
+                development and backend technology, where I&apos;ve developed
+                several projects that leverage the power of Spring Framework
+                based systems to create secure and transparent applications.
               </p>
             </div>
 
@@ -52,7 +68,9 @@ export default function AboutPage() {
                     <CardTitle>
                       <div>
                         <h3 className="text-lg font-bold">{edu.degree}</h3>
-                        <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {edu.institution}
+                        </p>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -61,7 +79,9 @@ export default function AboutPage() {
                       <span className="text-muted-foreground">
                         {edu.startDate} - {edu.endDate}
                       </span>
-                      <span className="text-muted-foreground">{edu.location}</span>
+                      <span className="text-muted-foreground">
+                        {edu.location}
+                      </span>
                     </div>
                     {edu.gpa && (
                       <Badge variant="outline" className="mt-2">
@@ -83,7 +103,7 @@ export default function AboutPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold mb-4">Skills</h2>
-            
+
             {Object.keys(skills).map((category) => (
               <div key={category} className="mb-6">
                 <h3 className="text-lg font-semibold mb-3">{category}</h3>
@@ -104,37 +124,36 @@ export default function AboutPage() {
                   <li className="flex items-start">
                     <span className="text-primary mr-2 font-bold">•</span>
                     <span>
-                      Led University&apos;s Technical Team as Convener, increasing student engagement by 40% through committee formation and industry-aligned website redesigns.
+                      Led University&apos;s Technical Team as Convener,
+                      increasing student engagement by 40% through committee
+                      formation and industry-aligned website redesigns.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2 font-bold">•</span>
                     <span>
-                      Served as a Board Member of the APP Design and Development Club, mentoring newcomers and improving skills by 60%.
+                      Served as the president of Google Developer Student Club,
+                      leading a team of 20+ to organize workshops and
+                      hackathons, enhancing technical skills and community
+                      engagement.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2 font-bold">•</span>
                     <span>
-                      Won $1500 Nillion Track Prize at Hacker House Goa 2024.
+                      Built an investment strategy which secured a top 5 global
+                      rank at IIT Roorkee's Finance Hacakthon
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2 font-bold">•</span>
-                    <span>
-                      Awarded $600 at Move it with Aptos event.
-                    </span>
+                    <span>Finalist at Nomura's Kakushin Hackathon.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2 font-bold">•</span>
                     <span>
-                      Received $500 Marbelism Track Prize at HACKSRM 2.0 2024.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2 font-bold">•</span>
-                    <span>
-                      Won $100 at APPATHON 2022.
+                      Secured a rank in the top 0.8% among over 1.2 million
+                      candidates in the JEE Mains 2020 exam.
                     </span>
                   </li>
                 </ul>

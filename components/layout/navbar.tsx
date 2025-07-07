@@ -38,27 +38,27 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Determine scroll direction and toggle navbar visibility
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false); // Hide when scrolling down
       } else {
         setIsVisible(true); // Show when scrolling up or at top
       }
-      
+
       // Update scroll state for shadows and backdrop
       setIsScrolled(currentScrollY > 20);
-      
+
       // Update last scroll position
       setLastScrollY(currentScrollY);
     };
 
     // Set initial state
     handleScroll();
-    
+
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -72,11 +72,11 @@ export function Navbar() {
 
   // Navbar container variants for animations
   const navbarVariants = {
-    hidden: { 
+    hidden: {
       y: -100,
-      opacity: 0 
+      opacity: 0,
     },
-    visible: { 
+    visible: {
       y: 0,
       opacity: 1,
       transition: {
@@ -84,17 +84,17 @@ export function Navbar() {
         stiffness: 300,
         damping: 20,
         mass: 0.5,
-        duration: 0.1
-      }
+        duration: 0.1,
+      },
     },
     exit: {
       y: -100,
       opacity: 0,
       transition: {
         duration: 0.1,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   // Navbar link item variants for animations
@@ -106,19 +106,21 @@ export function Navbar() {
       transition: {
         delay: 0.05 * i,
         duration: 0.5,
-        ease: "easeOut"
-      }
-    })
+        ease: "easeOut",
+      },
+    }),
   };
 
   // Adjust the backdrop blur and color based on theme
-  const isScrolledBgClass = theme === 'dark' 
-    ? "bg-background/30 backdrop-blur-md border-[0.5px] border-white/10 shadow-[0_8px_32px_rgba(255,255,255,0.03)]" 
-    : "bg-background/40 backdrop-blur-md border-[0.5px] border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)]";
-  
-  const notScrolledBgClass = theme === 'dark'
-    ? "bg-background/20 backdrop-blur-sm border-[0.5px] border-white/5"
-    : "bg-background/20 backdrop-blur-sm border-[0.5px] border-white/10";
+  const isScrolledBgClass =
+    theme === "dark"
+      ? "bg-background/30 backdrop-blur-md border-[0.5px] border-white/10 shadow-[0_8px_32px_rgba(255,255,255,0.03)]"
+      : "bg-background/40 backdrop-blur-md border-[0.5px] border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)]";
+
+  const notScrolledBgClass =
+    theme === "dark"
+      ? "bg-background/20 backdrop-blur-sm border-[0.5px] border-white/5"
+      : "bg-background/20 backdrop-blur-sm border-[0.5px] border-white/10";
 
   return (
     <>
@@ -126,7 +128,7 @@ export function Navbar() {
       <div className="sr-only">
         <CommandPalette />
       </div>
-      
+
       <AnimatePresence>
         {isVisible && (
           <motion.header
@@ -134,6 +136,7 @@ export function Navbar() {
             initial="hidden"
             animate="visible"
             exit="exit"
+            suppressHydrationWarning // Suppress hydration warning for this motion component
             className={cn(
               "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-300 rounded-xl py-3 px-4",
               isScrolled ? isScrolledBgClass : notScrolledBgClass
@@ -143,7 +146,7 @@ export function Navbar() {
               <div className="flex items-center justify-between">
                 {/* Logo with fixed width */}
                 <div className="w-[160px]">
-                  <Link 
+                  <Link
                     href="/"
                     className="font-display text-xl font-bold transition-colors hover:text-primary"
                   >
@@ -152,7 +155,7 @@ export function Navbar() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5 }}
                     >
-                      Achyut Katiyar
+                      Harshvardhan
                     </motion.span>
                   </Link>
                 </div>
@@ -186,7 +189,7 @@ export function Navbar() {
                     ))}
                   </nav>
                 </div>
-                
+
                 {/* Theme toggle - Right aligned with fixed width */}
                 <div className="w-[160px] flex justify-end">
                   <motion.div
@@ -204,10 +207,14 @@ export function Navbar() {
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, type: "spring" }}
-                    className="md:hidden ml-4" 
+                    className="md:hidden ml-4"
                   >
                     <SheetTrigger asChild>
-                      <Button variant="ghost" size="icon" className="rounded-full bg-muted/50">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="rounded-full bg-muted/50"
+                      >
                         <Menu className="h-6 w-6" />
                         <span className="sr-only">Toggle menu</span>
                       </Button>
@@ -216,18 +223,18 @@ export function Navbar() {
                   <SheetContent side="right" className="p-0">
                     <div className="flex flex-col h-full">
                       <div className="p-6 flex justify-between items-center">
-                        <Link 
+                        <Link
                           href="/"
                           className="font-display text-2xl font-bold transition-colors hover:text-primary"
                         >
-                          Achyut Katiyar
+                          Harshvardhan Bhosale
                         </Link>
                         <ThemeSwitch />
                       </div>
                       <div className="flex-1 px-6 py-8">
                         <ul className="flex flex-col gap-1">
                           {navItems.map((item, i) => (
-                            <motion.li 
+                            <motion.li
                               key={item.href}
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}

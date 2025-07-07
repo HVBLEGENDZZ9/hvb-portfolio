@@ -1,8 +1,8 @@
 // app/metadata.ts
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Achyut Katiyar | Portfolio",
+  title: "Harshvardhan Bhosale | Portfolio",
   description: "Full Stack Developer & Machine Learning Enthusiast",
   icons: {
     icon: [
