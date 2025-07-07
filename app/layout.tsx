@@ -13,11 +13,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Harshvardhan Bhosale" }],
   keywords: [
     "Full Stack Developer",
-    "Web3",
-    "Blockchain",
+    "Java",
+    "Springboot",
     "Next.js",
     "React",
+    "Deep Learning",
     "Machine Learning",
+    "Quantitative Finance",
   ],
 
   openGraph: {
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://harshvardhanbhosale.com",
     title: "Harshvardhan Bhosale | Full Stack Developer",
     description:
-      "Full Stack Developer & Blockchain and Machine Learning Enthusiast with expertise in Next.js, React, and blockchain technologies.",
+      "Full Stack & Java developer with expertise in Spring Boot, MERN Stack, Machine learning and Quantitative Finance.",
     siteName: "Harshvardhan Bhosale",
     locale: "en_US",
     images: [

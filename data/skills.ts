@@ -3,7 +3,6 @@ export type SkillCategory =
   | "Languages"
   | "Frameworks/Libraries"
   | "ML/Data"
-  | "Blockchain/Web3"
   | "Cloud/DevOps"
   | "Concepts";
 
