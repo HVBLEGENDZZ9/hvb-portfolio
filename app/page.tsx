@@ -2,7 +2,6 @@ import { Hero } from "@/components/home/hero";
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { SkillsShowcase } from "@/components/home/skills-showcase";
 import { Achievements } from "@/components/home/achievements";
-import { Testimonials } from "@/components/home/testimonials";
 import ExperiencePage from "./(routes)/experience/page";
 
 export default function HomePage() {
