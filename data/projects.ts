@@ -12,6 +12,60 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+{
+  id: "mimir",
+  title: "Mimir",
+  description:
+    "Built and shipped end-to-end real-time VoIP AI agents for customer support.",
+  longDescription:
+    "Led the development of real-time conversational AI agents, significantly improving customer support efficiency and resolution rates for SMBs.",
+  technologies: [
+    "FastAPI",
+    "WebRTC",
+    "LangChain",
+    "OpenAI Realtime",
+    "Twilio Media Streams",
+    "Semantic VAD",
+    "RAG (Retrieval-Augmented Generation)",
+    "TypeScript", // Assuming the codebase would leverage TypeScript 
+  ],
+  achievements: [
+    "Built and shipped end-to-end real-time VoIP AI agents for customer support, cutting average handle time by 42% and improving first-contact resolution by 28% across 20+ SMB deployments.",
+    "Architected multi-tenant versioning with per-tenant vector stores and rate-isolated pipelines, enabling 5x concurrency scaling while maintaining sub-250 ms round-trip latency for speech-to-action loops.",
+    "Integrated Semantic VAD and intent-aware turn-taking to optimize barge-in and silence detection, reducing interruption errors and boosting CSAT by 18 points through more natural conversational flow.",
+    "Implemented telephonic RAG with tool-use for ticket lookups, order status, and booking flows, automating 65% of repetitive Tier-1 tasks delivering 1.3x ROI within 90 days.",
+  ],
+  image: "/images/projects/mimir/mimir.png", // Placeholder image path
+  github: "https://github.com/HVBLEGENDZZ9/Openai-Twilio-Call-agent", // Assuming no public GitHub repo for a founder's project
+  liveUrl: "", // Placeholder for potential live demo/site
+  featured: true,
+  },
+{
+  id: "redis-go-clone",
+  title: "Redis Clone",
+  description:
+    "Engineered a functional, concurrent NoSQL in-memory data store from scratch in Go, focusing on performance and protocol accuracy.",
+  longDescription:
+    "Developed a TCP-based key-value server that implements the core features and protocol of a popular in-memory data store (Redis). The project focused on building a highly concurrent architecture in Go, implementing the full **REdis Serialization Protocol (RESP)**, and integrating a robust **Append-Only File (AOF)** mechanism for data persistence.",
+  technologies: [
+    "Golang",
+    "TCP",
+    "RESP",
+    "Concurrency",
+    "Persistence",
+    "Systems Programming",
+  ],
+  achievements: [
+    "Architected and implemented a concurrent TCP server in Go, leveraging Goroutines and RWMutexes to efficiently handle simultaneous client connections and maintain high throughput.",
+    "Successfully implemented the REdis Serialization Protocol (RESP) specification, enabling seamless communication with standard Redis clients and supporting core data types (Strings, Arrays, Errors).",
+    "Integrated a crash-safe Append-Only File (AOF) persistence mechanism, ensuring data integrity and reliable recovery upon server restart.",
+    "Designed and built a modular command handler to process essential NoSQL operations (SET, GET, DEL) with an average command execution latency of sub-1 millisecond.",
+  ],
+  image: "/images/projects/redis-clone/server-architecture.png", // Use a placeholder that suggests system architecture
+  github: "https://github.com/hvblegendzz9/redis-go", // Linked to the project's repository
+  liveUrl: "", // Typically no live URL for a custom server/database
+  featured: true,
+},
   {
     id: "enigma",
     title: "Enigma",

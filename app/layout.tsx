@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Harshvardhan Bhosale" }],
   keywords: [
     "Full Stack Developer",
+    "Founder",
     "Java",
     "Springboot",
     "Next.js",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://harshvardhanbhosale.com",
     title: "Harshvardhan Bhosale | Full Stack Developer",
     description:
-      "Full Stack & Java developer with expertise in Spring Boot, MERN Stack, Machine learning and Quantitative Finance.",
+      "Full Stack developer with expertise in building high performance backend systems using microservices architecture and modern web technologies.",
     siteName: "Harshvardhan Bhosale",
     locale: "en_US",
     images: [

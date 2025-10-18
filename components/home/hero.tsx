@@ -111,12 +111,8 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="max-w-[600px] text-muted-foreground md:text-xl"
               >
-                I am a passionate developer with expertise in MERN stack, Java
-                and Quantitative Mathematics. Internship experiences at
-                Microsoft and Nomura. I am pursuing my MS in Computer Science
-                with specialization in AI from University at Buffalo. I am
-                looking for Software Engineering roles starting from January
-                2026. I am available to work without sponsorship.
+                I build high performance systems that you can actually ship to the users. I leverage microservices architecture with Spring Boot and modern web technologies. Right now, I am building AI bookeeping assistant for construction finance.
+                I am available to work on exciting projects and collaborations.
               </motion.p>
             </div>
 
