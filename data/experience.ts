@@ -13,6 +13,23 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "software-engineer-mimir",
+    title: "Software Engineer (Founder)",
+    company: "Mimir",
+    location: "Mumbai, India",
+    startDate: "April 2025",
+    endDate: "Present",
+    description:
+      "Built and shipped end-to-end real-time VoIP AI agents for customer support, architected multi-tenant versioning for scalability, and integrated advanced conversational AI features.",
+    achievements: [
+      "Built and shipped end-to-end real-time VoIP AI agents for customer support using FastAPI, WebRTC, LangChain, and OpenAI Realtime via Twilio Media Streams, cutting average handle time by 42% and improving first-contact resolution by 28% across 20+ SMB deployments.",
+      "Architected multi-tenant versioning with per-tenant vector stores and rate-isolated pipelines, enabling 5x concurrency scaling while maintaining sub-250 ms round-trip latency for speech-to-action loops.",
+      "Integrated Semantic VAD and intent-aware turn-taking to optimize barge-in and silence detection, reducing interruption errors and boosting CSAT by 18 points through more natural conversational flow.",
+      "Implemented telephonic RAG with tool-use for ticket lookups, order status, and booking flows, automating 65% of repetitive Tier-1 tasks delivering 1.3x ROI within 90 days.",
+    ],
+    type: "work",
+  },
+  {
     id: "software-intern-nomura",
     title: "Software Development Intern",
     company: "Nomura",
